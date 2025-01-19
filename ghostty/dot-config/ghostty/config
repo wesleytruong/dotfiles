@@ -1,0 +1,17 @@
+# font-family = "Cascadia Mono"
+
+theme = "Desert"
+# theme = "catppuccin-macchiato"
+# theme = "Dracula"
+
+background-opacity = 0.8
+
+cursor-style-blink = false
+cursor-style = block
+shell-integration-features = no-cursor
+
+# title = "👻"
+macos-titlebar-proxy-icon = hidden
+macos-titlebar-style = hidden
+
+window-decoration = false
