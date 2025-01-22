@@ -85,11 +85,11 @@ source $ZSH/oh-my-zsh.sh
 # export LANG=en_US.UTF-8
 
 # Preferred editor for local and remote sessions
-# if [[ -n $SSH_CONNECTION ]]; then
-#   export EDITOR='vim'
-# else
-#   export EDITOR='nvim'
-# fi
+if [[ -n $SSH_CONNECTION ]]; then
+  export EDITOR='vim'
+else
+  export EDITOR='nvim'
+fi
 
 # Compilation flags
 # export ARCHFLAGS="-arch $(uname -m)"
@@ -106,9 +106,19 @@ source $ZSH/oh-my-zsh.sh
 alias zshconfig="nvim ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
 
+### ALIASES
 alias vim="nvim"
 alias lg='lazygit'
+alias via='DISABLE_SUDO_PROMPT=1 via'
+alias stow='stow --dotfiles'
+alias fetch='fastfetch'
 
-# PATH
+### PATH
 export MANPAGER='nvim +Man!'
+export PATH=$HOME/.config/rofi/scripts:$PATH # rofi menus
 
+### CONFIGURATIONS
+# zsh-autosuggestions
+bindkey '^y' autosuggest-accept
+# fzf
+source <(fzf --zsh)
