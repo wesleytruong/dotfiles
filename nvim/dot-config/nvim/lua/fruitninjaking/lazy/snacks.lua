@@ -23,7 +23,8 @@ return {
           picker.preview.state.colorscheme = nil
           vim.schedule(function()
             vim.cmd("colorscheme " .. item.text)
-            local file, err = io.open("lua/fruitninjaking/colors.lua", "w")
+            local file_path = vim.fn.expand("~/.config/nvim/lua/fruitninjaking/colors.lua")
+            local file, err = io.open(file_path, "w")
             if file then
               file:write("vim.cmd('colorscheme " .. item.text .. "')")
               file:close()
