@@ -33,6 +33,7 @@ return {
         clangd = {},
         pyright = {},
         gopls = {},
+        zls = {},
       }
     },
     config = function(_, opts)
