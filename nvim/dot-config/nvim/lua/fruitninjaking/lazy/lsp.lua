@@ -8,12 +8,9 @@ return {
     -- communicates mason with nvim-lspconfig
     "williamboman/mason-lspconfig",
     dependencies = {
-      "williamboman/mason.nvim"
+      "williamboman/mason.nvim",
+      "neovim/nvim-lspconfig"
     },
-    opts = {
-      ensure_installed = { "lua_ls" },
-      automatic_installation = true,
-    }
   },
   {
     -- allows to set up keybinds to navigate files with lang server features
