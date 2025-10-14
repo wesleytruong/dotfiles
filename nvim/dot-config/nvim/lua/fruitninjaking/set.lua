@@ -38,3 +38,7 @@ vim.opt.breakindentopt = "shift:2,min:40,sbr"
 -- vim.opt.showbreak = ">>"
 
 vim.g.markdown_recommended_style = 0
+
+vim.cmd([[
+set mousescroll=ver:1,hor:2
+]])
