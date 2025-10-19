@@ -37,7 +37,8 @@ return {
       local lsp = require("lspconfig")
       for server, config in pairs(opts.servers) do
         config.capabilities = require('blink.cmp').get_lsp_capabilities(config.capabilities)
-        lsp[server].setup(config)
+        vim.lsp.config(server, config)
+        vim.lsp.enable(server)
       end
 
       vim.keymap.set('n','K', vim.lsp.buf.hover, {})
