@@ -1,8 +1,34 @@
+local ascii = require('fruitninjaking.lazy.ascii.ascii')
+
 return {
   "folke/snacks.nvim",
   ---@type snacks.Config
   opts = {
     picker = {},
+    image = {
+      img_dirs = { "img", "images", "assets", "static", "public", "media", "attachments" },
+    },
+    dashboard = {
+      enabled = true,
+      preset = {
+        header = table.concat(ascii['pika'], "\n"),
+        keys = {
+          { icon = "󰺄 ", key = "f", desc = "Find File", action = ":lua Snacks.picker.files()" },
+          { icon = " ", key = "e", desc = "New File", action = ":ene | startinsert" },
+          -- { icon = " ", key = "s", desc = "Resume Last File", action = ":lua vim.cmd('e ' .. vim.v.oldfiles[1])" },
+          -- { icon = "", key = "r", desc = "Recent Files", action = ":lua Snacks.picker.recent()" },
+          { icon = " ", key = "g", desc = "Find Text", action = ":lua Snacks.picker.grep()" },
+          { icon = " ", key = "c", desc = "Config", action = ":cd ~/.config/nvim | Explore" },
+          { icon = "󰈆 ", key = "q", desc = "Quit", action = ":qa" },
+        },
+      },
+      sections = {
+        { section = "header" },
+        { section = "keys", gap = 1, padding = 2 },
+        { icon = " ", title = "Recent Files", section = "recent_files", indent = 2, padding = 2 },
+        { section = "startup" },
+      },
+    },
   },
   keys = {
     -- Find
