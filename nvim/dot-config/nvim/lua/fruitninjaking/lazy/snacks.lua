@@ -2,6 +2,8 @@ local ascii = require('fruitninjaking.lazy.ascii.ascii')
 
 return {
   "folke/snacks.nvim",
+  priority = 1000,
+  lazy = false,
   ---@type snacks.Config
   opts = {
     picker = {},
@@ -31,7 +33,6 @@ return {
     },
   },
   keys = {
-    -- Find
     {"<leader>fs", function() Snacks.picker.buffers() end, desc = "Buffers" },
     {"<leader>ps", function() Snacks.picker.grep() end, desc = "Grep" },
     {"<leader>pf", function() Snacks.picker.files() end, desc = "Find Files" },
