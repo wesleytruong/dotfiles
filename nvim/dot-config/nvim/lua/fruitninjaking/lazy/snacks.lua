@@ -6,9 +6,16 @@ return {
   lazy = false,
   ---@type snacks.Config
   opts = {
-    picker = {},
+    picker = {
+      sources = {
+        lsp_definitions = { focus = "list" },
+        lsp_references = { focus = "list" },
+        lsp_type_definitions = { focus = "list" },
+      },
+    },
     image = {
       img_dirs = { "img", "images", "assets", "static", "public", "media", "attachments" },
+      math = { enabled = false },
     },
     dashboard = {
       enabled = true,
