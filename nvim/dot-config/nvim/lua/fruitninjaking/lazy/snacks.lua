@@ -6,9 +6,6 @@ return {
   lazy = false,
   ---@type snacks.Config
   opts = {
-    gitbrowse = {
-      what = "file", -- opens file instead of commit
-    },
     picker = {
       sources = {
         lsp_definitions = { focus = "list" },
@@ -51,9 +48,6 @@ return {
     { "gd", function() Snacks.picker.lsp_definitions() end, desc = "Goto Definition" },
     { "gr", function() Snacks.picker.lsp_references() end, nowait = true, desc = "References" },
     { "td", function() Snacks.picker.lsp_type_definitions() end, desc = "Goto Type Definition" },
-    -- GitBrowse
-    { "gh", function() Snacks.gitbrowse.open() end, mode = { "n", "x" }, desc = "Open line in GitHub" },
-    { "gH", function() Snacks.gitbrowse.open({ what = "permalink" }) end, mode = { "n", "x" }, desc = "Open permalink in GitHub" },
     -- Misc
     { "<leader>cc", function() Snacks.picker.colorschemes({
       preview = "",

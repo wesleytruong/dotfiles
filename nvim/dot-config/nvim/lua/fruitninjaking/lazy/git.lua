@@ -38,6 +38,18 @@ return {
   --   end
   -- }
   {
+    "folke/snacks.nvim",
+    opts = {
+      gitbrowse = {
+        what = "file",
+      },
+    },
+    keys = {
+      { "gh", function() Snacks.gitbrowse.open() end, mode = { "n", "x" }, desc = "Open line in GitHub" },
+      { "gH", function() Snacks.gitbrowse.open({ what = "permalink" }) end, mode = { "n", "x" }, desc = "Open permalink in GitHub" },
+    },
+  },
+  {
     "kdheepak/lazygit.nvim",
     lazy = true,
     cmd = {
