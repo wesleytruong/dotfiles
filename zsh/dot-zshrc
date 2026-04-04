@@ -28,6 +28,8 @@ alias fetch='fastfetch'
 alias zshconfig="nvim ~/.zshrc"
 alias ls="eza"
 alias ff="fzf --preview 'bat --style=numbers --color=always {}'"
+alias sv="source .venv/bin/activate"
+alias zathura="zathura 2>/dev/null --fork"
 
 alias ..='cd ..'
 alias ...='cd ../..'
@@ -36,6 +38,7 @@ alias ....='cd ../../..'
 ### PATH
 export MANPAGER='nvim +Man!'
 export PATH=$HOME/.config/rofi/scripts:$PATH # rofi menus
+export PATH="$HOME/.local/bin:$PATH"
 
 ### CONFIGURATIONS
 # zsh-autosuggestions
