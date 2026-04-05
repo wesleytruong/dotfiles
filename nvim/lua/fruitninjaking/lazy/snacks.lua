@@ -27,6 +27,7 @@ return {
           -- { icon = " ", key = "s", desc = "Resume Last File", action = ":lua vim.cmd('e ' .. vim.v.oldfiles[1])" },
           -- { icon = "", key = "r", desc = "Recent Files", action = ":lua Snacks.picker.recent()" },
           { icon = " ", key = "g", desc = "Neogit", action = "<cmd>Neogit<cr>"},
+          { icon = " ", key = "d", desc = "Diffview", action = "<cmd>DiffviewOpen<cr>" },
           -- { icon = " ", key = "s", desc = "Grep Search", action = ":lua Snacks.picker.grep()" },
           { icon = " ", key = "c", desc = "Config", action = ":cd ~/.config/nvim | Explore" },
           { icon = "󰈆 ", key = "q", desc = "Quit", action = ":qa" },
