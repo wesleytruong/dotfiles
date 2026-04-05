@@ -1,2 +1,2 @@
-tmux/dot-config/tmux/*.log
-tmux/dot-config/tmux/plugins
+tmux/*.log
+tmux/plugins

@@ -1,0 +1,15 @@
+{
+  "zsh": { "source": "zshrc", "target": "~/.zshrc" },
+  "git": {  "target": "~/.config/git" },
+  "nvim": { "target": "~/.config/nvim" },
+  "tmux": { "target": "~/.config/tmux" },
+  "ghostty": { "target": "~/.config/ghostty" },
+  "hypr": { "target": "~/.config/hypr" },
+  "kitty": { "target": "~/.config/kitty" },
+  "aerospace": { "target": "~/.config/aerospace" },
+  "wezterm": { "target": "~/.config/wezterm" },
+  "yazi": { "target": "~/.config/yazi" },
+  "zellij": { "target": "~/.config/zellij" },
+  "sway-lock": { "target": "~/.config/sway-lock" },
+  "sketchybar": { "target": "~/.config/sketchybar" }
+}

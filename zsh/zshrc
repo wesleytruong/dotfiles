@@ -23,7 +23,6 @@ fi
 alias vim="nvim"
 alias lg='lazygit'
 alias via='DISABLE_SUDO_PROMPT=1 via'
-alias stow='stow --dotfiles'
 alias fetch='fastfetch'
 alias zshconfig="nvim ~/.zshrc"
 alias ls="eza"
